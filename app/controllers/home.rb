@@ -8,16 +8,22 @@ get '/contacts' do
   erb :contacts
 end
 
-get '/contacts/:id' do
-  # display single contact
-  @contact = Contact.find(:id)
-  erb :single_contact
+post '/contacts/new' do
+  # create new contact
 end
 
-post '/contacts/:id/edit' do
+get '/contacts/edit/:id' do
+  # show contact edit page
+  @contact = Contact.find(params[:id])
+  erb :edit_contact
+end
+
+post '/contacts/edit/:id' do
   # edit a contact
 end
 
-post '/contacts/new' do
-  # create new contact
+get '/contacts/:id' do
+  # display single contact
+  @contact = Contact.find(params[:id])
+  erb :single_contact
 end
