@@ -1,0 +1,13 @@
+<table>
+  <thead>
+    <th>Name</th><th>Address</th><th>Email</th><th>Phone</th>
+  </thead>
+  <tbody>
+    <% @contacts.each do |person| %>
+      <tr>
+        <td><%= @contact.first_name %> <%= @contact.last_name %></td><td>
+          <%= @contact.street %><%= @contact.city %><%= @contact.state %><%= @contact.zip %></td><td><%= @contact.email %></li></td><td><%= @contact.phone %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
