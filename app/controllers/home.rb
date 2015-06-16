@@ -4,11 +4,13 @@ end
 
 get '/contacts' do
   # display all contacts
+  @contacts = Contact.all
   erb :contacts
 end
 
 get '/contacts/:id' do
   # display single contact
+  @contact = Contact.find(:id)
   erb :single_contact
 end
 
