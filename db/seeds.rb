@@ -1,20 +1,10 @@
-Contact.create(
-   :first_name => "Bob",
-   :last_name => "Jones",
-   :street => "1255 Main St.",
-   :city => "San Francisco",
-   :state => "CA",
-   :zip => "94591",
-   :email => "bobjones@gmail.com",
-   :phone => "415-220-2139"
-)
-Contact.create(
-   :first_name => "Frank",
-   :last_name => "Jones",
-   :street => "3423 Main St.",
-   :city => "Vallejo",
-   :state => "CA",
-   :zip => "94591",
-   :email => "frank@gmail.com",
-   :phone => "707-342-1366"
-)
+50.times do Contact.create(
+   :first_name => Faker::Name.first_name,
+   :last_name => Faker::Name.last_name,
+   :street => Faker::Address.street_address,
+   :city => Faker::Address.city,
+   :state => Faker::Address.state,
+   :zip => Faker::Address.zip,
+   :email => Faker::Internet.email,
+   :phone => Faker::PhoneNumber.cell_phone
+) end

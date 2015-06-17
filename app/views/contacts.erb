@@ -1,12 +1,12 @@
 <table>
   <thead>
-    <th>Name</th><th>Address</th><th>Email</th><th>Phone</th>
+    <th>Name</th><th>Email</th><th>Phone</th>
   </thead>
   <tbody>
     <% @contacts.each do |person| %>
       <tr>
         <td><%= person.first_name %> <%= person.last_name %></td><td>
-          <%= person.street %><%= person.city %><%= person.state %><%= person.zip %></td><td><%= person.email %></li></td><td><%= person.phone %></td><td><a href="/contacts/<%= person.id %>">View</a></td><td><a href="/contacts/edit/<%= person.id %>">Edit</a></td>
+        <%= person.street %><%= person.city %><%= person.state %><%= person.zip %></td><td><%= person.email %></li></td><td><%= person.phone %></td><td><a href="/contacts/<%= person.id %>">View</a></td><td><a href="/contacts/edit/<%= person.id %>">Edit</a></td>
       </tr>
     <% end %>
   </tbody>

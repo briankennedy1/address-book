@@ -2,7 +2,7 @@ get '/' do
   redirect to '/contacts'
 end
 
-get '/contacts' do
+get '/contacts/?' do
   # display all contacts
   @contacts = Contact.all
   erb :contacts
