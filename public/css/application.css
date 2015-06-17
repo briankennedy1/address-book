@@ -5,3 +5,14 @@
 td {
   padding: 12px;
 }
+#add-new {
+  margin: 10px;
+}
+
+form input {
+  margin: 10px;
+  display: block;
+}
+.new-contact-form {
+  display: none;
+}

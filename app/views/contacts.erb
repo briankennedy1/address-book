@@ -10,4 +10,18 @@
     <% end %>
   </tbody>
 </table>
-<div id="add-new"><input type="submit" method="" action="" value="Add New"></div>
+<div id="add-new">
+  <input id="add-new-btn" type="submit" method="post" action="/contacts/new" value="Add New">
+
+  <form class="new-contact-form" action="/contacts/new" method="post">
+    <input type="text" name="first_name" placeholder="first_name">
+    <input type="text" name="last_name" placeholder="last_name">
+    <input type="text" name="street" placeholder="street">
+    <input type="text" name="city" placeholder="city">
+    <input type="text" name="state" placeholder="state">
+    <input type="text" name="zip" placeholder="zip">
+    <input type="text" name="email" placeholder="email">
+    <input type="text" name="phone" placeholder="phone">
+    <input id="add-contact-btn" type="button" value="Add Contact">
+  </form>
+</div>
